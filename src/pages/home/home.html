@@ -1,14 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Pune Firebase Hackathon 
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label color="primary" stacked>Write Your Message Here</ion-label>
+    <ion-input type="text" [(ngModel)]="message" name="message"></ion-input>
+  </ion-item>
+  <button ion-button (click)="onEncrypt()">Encrypt</button>
+  <ion-item> Encrypted message: {{ encMessage }} </ion-item>
+  <ion-item> Decrypted message: {{ decMessage }} </ion-item>
 </ion-content>
